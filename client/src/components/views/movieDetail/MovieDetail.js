@@ -25,11 +25,13 @@ function MovieDetail(props) {
     return (
         <div>
             {/*Header */}
-            <MainImage 
-                image={`${IMAGE_BASE_URL}w1280${Movie.backdrop_path}`}
-                title={Movie.original_title}
-                text={Movie.overview}
-            />
+            {Movie.backdrop_path&&
+                <MainImage 
+                    image={`${IMAGE_BASE_URL}w1280${Movie.backdrop_path}`}
+                    title={Movie.original_title}
+                    text={Movie.overview}
+                />
+            }
             <div>
                 {/*Body */}
                 <div style={{width:'85%', margin:'1rem auto'}}>
@@ -38,7 +40,7 @@ function MovieDetail(props) {
                     <MovieInfo 
                         movie ={Movie}
                     />
-                    
+
                     <br/>
 
                     {/*Actors Grid */}

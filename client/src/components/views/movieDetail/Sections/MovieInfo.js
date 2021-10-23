@@ -2,7 +2,8 @@ import React from 'react'
 import { Descriptions, Badge } from 'antd';
 
 function MovieInfo(props) {
-
+    //JS desctucting
+    //let movie = props.movie
     let { movie } = props
 
     return (
